@@ -15,6 +15,7 @@ set -x
 cd $DIR
 bun i
 
+# windows 下面 bun x 会报错
 updist=$DIR/node_modules/@3-/updist/mod.js
 
 # $updist -h
