@@ -23,7 +23,7 @@ MINGW*)
   mkdir -p /tmp/coreutils
   cd /tmp/coreutils
   zipfile=coreutils-0.1.0-x86_64-pc-windows-msvc.zip
-  curl -O https://github.com/uutils/coreutils/releases/download/0.1.0/$zipfile
+  curl -OL https://github.com/uutils/coreutils/releases/download/0.1.0/$zipfile
   unzip -j $zipfile
   chmod +x coreutils.exe
   mv coreutils.exe $(which env)
