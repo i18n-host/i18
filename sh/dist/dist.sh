@@ -14,16 +14,22 @@ set +a
 set -x
 cd $DIR
 bun i
-bash --version
-which env
 
-zipfile=coreutils-0.1.0-x86_64-pc-windows-msvc.zip
-wget https://github.com/uutils/coreutils/releases/download/0.1.0/$zipfile
-unzip -j $zipfile
-chmod +x coreutils.exe
-mv coreutils.exe $(which env)
+case "$(uname -s)" in
+MINGW*)
+  bash --version
+  which env
 
-bun x updist -h
+  zipfile=coreutils-0.1.0-x86_64-pc-windows-msvc.zip
+  wget https://github.com/uutils/coreutils/releases/download/0.1.0/$zipfile
+  unzip -j $zipfile
+  chmod +x coreutils.exe
+  mv coreutils.exe $(which env)
+
+  bun x updist -h
+  ;;
+esac
+
 . ./release.sh
 
 {
