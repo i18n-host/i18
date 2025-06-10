@@ -15,23 +15,9 @@ set -x
 cd $DIR
 bun i
 
-case "$(uname -s)" in
-MINGW*)
-  bash --version
-  which env
+updist=$DIR/node_modules/@3-/updist/mod.js
 
-  mkdir -p /tmp/coreutils
-  cd /tmp/coreutils
-  zipfile=coreutils-0.1.0-x86_64-pc-windows-msvc.zip
-  curl -OL https://github.com/uutils/coreutils/releases/download/0.1.0/$zipfile
-  unzip -j $zipfile
-  chmod +x coreutils.exe
-  mv coreutils.exe $(which env)
-  env -V
-  cd $DIR
-  bun x updist -h
-  ;;
-esac
+$updist -h
 
 . ./release.sh
 
@@ -41,5 +27,5 @@ esac
 } <<<"$META"
 
 find "/tmp/bin/$NAME/$VER" -mindepth 1 -maxdepth 1 -type d -print0 | while IFS= read -r -d '' dir; do
-  bun x updist $NAME $VER $CONF/upgrade/sk $dir
+  $updist $NAME $VER $CONF/upgrade/sk $dir
 done
