@@ -14,7 +14,7 @@ set +a
 set -x
 cd $DIR
 bun i
-
+bun x updist -h
 . ./release.sh
 
 {
