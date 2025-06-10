@@ -38,7 +38,7 @@ jobs:
         with:
           repo-token: ${{ github.token }}
       - if: runner.os == 'linux'
-        uses: mlugg/setup-zig@v1
+        uses: mlugg/setup-zig@v2
 
       - name: init
         shell: bash
