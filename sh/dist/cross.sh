@@ -76,9 +76,10 @@ if [[ "$unameOut" == MINGW* ]]; then
   $build $target
 fi
 
+bindir=/tmp/bin/$PROJECT/$VER
+rm -rf $bindir
+
 for target in ${TARGET_LI[@]}; do
-  bindir=/tmp/bin/$PROJECT/$VER
-  rm -rf $bindir
   todir=$bindir/$target
   mkdir -p $todir
   find "$OUTDIR/$target/release" -maxdepth 1 -type f -perm 755 -print0 | xargs -0 sh -c 'mv "$@" "$0"' "$todir"
