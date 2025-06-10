@@ -816,7 +816,7 @@ dependencies = [
 
 [[package]]
 name = "i18"
-version = "0.1.21"
+version = "0.1.22"
 dependencies = [
  "aok",
  "bytes",
