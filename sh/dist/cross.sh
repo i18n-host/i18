@@ -30,6 +30,7 @@ Linux)
   if ! command -v cargo-zigbuild &>/dev/null; then
     cargo install cargo-zigbuild
   fi
+  apt-get install -y pkg-config libssl-dev
   TARGET_LI=(aarch64-unknown-linux-gnu aarch64-unknown-linux-musl x86_64-unknown-linux-gnu x86_64-unknown-linux-musl)
   ;;
 Darwin)
