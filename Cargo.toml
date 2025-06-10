@@ -1,6 +1,6 @@
 [package]
 name = "i18"
-version = "0.1.13"
+version = "0.1.14"
 edition = "2024"
 description = "i18n"
 repository = "https://github.com/i18n-host/i18.git"
@@ -28,7 +28,7 @@ default = []
 aok = "0.1.17"
 bytes = "1.10.1"
 change = "0.2.9"
-clap = "4.5.39"
+clap = "4.5.40"
 cmdv = "0.1.11"
 ft = "0.1.24"
 futures-util = "0.3.31"
@@ -37,10 +37,9 @@ globset = "0.4.16"
 ifs = { version = "0.1.45", features = ["fs"] }
 index_of = "0.1.1"
 intbin = "0.2.3"
-ireq = "0.1.20"
+ireq = "0.1.22"
 lang = "0.2.9"
 loginit = "0.1.18"
-openssl-sys = { version = "0.9.109", features = ["vendored"] }
 pb-jelly = "0.0.17"
 pbar = "0.1.8"
 reqwest = { version = "0.12.19", default-features = false, features = [
@@ -48,7 +47,7 @@ reqwest = { version = "0.12.19", default-features = false, features = [
   "rustls-tls-native-roots",
 ] }
 reqwest-websocket = "0.5.0"
-saphyr = "0.0.4"
+saphyr = "0.0.5"
 static_init = "1.0.4"
 thiserror = "2.0.12"
 txtfmt = "0.1.2"
@@ -79,6 +78,3 @@ tracing = "0.1.41"
 [dev-dependencies.tokio]
 version = "1.45.1"
 features = ["macros", "rt", "rt-multi-thread", "time", "sync"]
-
-[package.metadata.cargo-machete]
-ignored = ["openssl-sys"]
