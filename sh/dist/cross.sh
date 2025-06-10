@@ -21,7 +21,7 @@ unameOut="$(uname -s)"
 
 case "${unameOut}" in
 MINGW*)
-  choco install activeperl nasm &
+  choco install activeperl nasm coreutils &
   RUSTFLAGS="$RUSTFLAGS -C target-feature=+crt-static"
   TARGET_LI=$(rustc -vV | awk '/host/ { print $2 }')
   ;;
