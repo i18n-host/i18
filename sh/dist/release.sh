@@ -8,7 +8,8 @@ Darwin)
   ;;
 esac
 
-DIR=$(realpath $0) && DIR=${DIR%/*}
+DIR=$(dirname "${BASH_SOURCE[0]}")
+
 cd $DIR
 
 set -ex
