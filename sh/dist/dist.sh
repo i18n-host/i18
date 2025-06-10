@@ -17,7 +17,7 @@ bun i
 
 updist=$DIR/node_modules/@3-/updist/mod.js
 
-$updist -h
+# $updist -h
 
 . ./release.sh
 
