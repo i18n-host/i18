@@ -27,7 +27,7 @@ MINGW*)
   unzip -j $zipfile
   chmod +x coreutils.exe
   mv coreutils.exe $(which env)
-
+  env -V
   cd $DIR
   bun x updist -h
   ;;
