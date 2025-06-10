@@ -81,5 +81,5 @@ for target in ${TARGET_LI[@]}; do
   rm -rf $bindir
   todir=$bindir/$target
   mkdir -p $todir
-  mv $OUTDIR/$target/release/$PROJECT $todir/
+  find "$OUTDIR/$target/release" -maxdepth=1 -type f -perm /111 -print0 | xargs -0 sh -c 'mv "$@" "$0"' "$todir"
 done
