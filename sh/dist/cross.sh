@@ -26,7 +26,7 @@ MINGW*)
   TARGET_LI=$(rustc -vV | awk '/host/ { print $2 }')
   ;;
 Linux)
-  sudo apt-get install -y pkg-config libssl-dev
+  # sudo apt-get install -y pkg-config libssl-dev
   build="zigbuild"
   if ! command -v cargo-zigbuild &>/dev/null; then
     cargo install cargo-zigbuild
