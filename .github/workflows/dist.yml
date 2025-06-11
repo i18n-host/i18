@@ -21,6 +21,8 @@ jobs:
     runs-on: ${{ matrix.platform }}
 
     steps:
+      - if: runner.os == 'linux'
+        uses: mlugg/setup-zig@v2
       - if: runner.os == 'macOS'
         uses: maxim-lobanov/setup-xcode@v1
         with:
@@ -32,14 +34,11 @@ jobs:
         with:
           set-safe-directory: false
           lfs: true
-      - name: Install Protoc
-        if: runner.os != 'macOS'
-        uses: arduino/setup-protoc@v3
-        with:
-          repo-token: ${{ github.token }}
-      - if: runner.os == 'linux'
-        uses: mlugg/setup-zig@v2
-
+      # - name: Install Protoc
+      #   if: runner.os != 'macOS'
+      #   uses: arduino/setup-protoc@v3
+      #   with:
+      #     repo-token: ${{ github.token }}
       - name: init
         shell: bash
         env:
@@ -59,21 +58,21 @@ jobs:
         run: |
           sh/dist/dist.sh
 
-# v:
-#   runs-on: ubuntu-latest
-#   needs: build
-#   steps:
-#     # - uses: actions/setup-node@v4
-#     #   with:
-#     #     node-version: latest
-#     - uses: actions/checkout@v4
-#       with:
-#         set-safe-directory: false
-#         lfs: true
-#     - name: dist
-#       shell: bash
-#       run: |
-#         echo ${{inputs.name}}
-#         # cd sh/dist
-#         # ./dist.ver.sh ${{inputs.name}}
-#         # ./os.sh
+  ver:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/checkout@v4
+        with:
+          set-safe-directory: false
+          lfs: true
+      - name: vertxt
+        shell: bash
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          ./sh/confUnpack.sh
+          ./sh/dist/ver.sh
