@@ -75,4 +75,4 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           ./sh/confUnpack.sh
-          ./sh/dist/ver.sh
+          ./sh/dist/vertxt.sh
