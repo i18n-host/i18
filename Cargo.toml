@@ -1,0 +1,80 @@
+[package]
+name = "i18"
+version = "0.1.29"
+edition = "2024"
+description = "i18n"
+repository = "https://github.com/i18n-host/i18.git"
+homepage = "https://github.com/i18n-host/i18/tree/dev"
+keywords = []
+
+[profile.release]
+lto = true
+opt-level = 3
+incremental = true
+codegen-units = 1
+overflow-checks = false
+debug-assertions = false
+strip = false
+# panic = 'abort'
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+default = []
+
+[dependencies]
+aok = "0.1.17"
+bytes = "1.10.1"
+change = "0.2.9"
+clap = "4.5.40"
+cmdv = "0.1.11"
+ft = "0.1.24"
+futures-util = "0.3.31"
+genv = "0.1.16"
+globset = "0.4.16"
+ifs = { version = "0.1.45", features = ["fs"] }
+index_of = "0.1.1"
+intbin = "0.2.3"
+ireq = "0.1.22"
+lang = "0.2.9"
+loginit = "0.1.18"
+pb-jelly = "0.0.17"
+pbar = "0.1.8"
+reqwest = { version = "0.12.19", default-features = false, features = [
+  "rustls-tls",
+  "rustls-tls-native-roots",
+] }
+reqwest-websocket = "0.5.0"
+saphyr = "0.0.5"
+static_init = "1.0.4"
+thiserror = "2.0.12"
+txtfmt = "0.1.2"
+vb = "0.1.8"
+xbin = "0.1.6"
+xerr = "0.1.15"
+xhash = { version = "0.1.32", features = ["xhash"] }
+zstd = "0.13.3"
+
+[dependencies.ub64]
+version = "0.1.14"
+features = ["u64"]
+
+[dependencies.proto_tran]
+version = "0.1.32"
+# path = "../i18-proto/rust/proto_tran"
+
+[dependencies.tokio]
+version = "1.45.1"
+features = ["rt", "time", "macros", "rt-multi-thread"]
+
+[dev-dependencies]
+aok = "0.1.17"
+loginit = "0.1.18"
+static_init = "1.0.4"
+tracing = "0.1.41"
+
+[dev-dependencies.tokio]
+version = "1.45.1"
+features = ["macros", "rt", "rt-multi-thread", "time", "sync"]
