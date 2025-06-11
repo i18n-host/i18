@@ -2,17 +2,8 @@
 
 set -e
 DIR=$(realpath $0) && DIR=${DIR%/*}
-
-CONF=${DIR%/*/*}/conf
-cd $CONF
-set -a
-. cf.env
-. github.env
-. upgrade.env
-set +a
-
+. $DIR/env.sh
 set -x
-cd $DIR
 bun i
 
 # windows 下面 bun x 会报错

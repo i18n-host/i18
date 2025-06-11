@@ -1,7 +1,28 @@
 #!/usr/bin/env bash
 
+set -e
 DIR=$(realpath $0) && DIR=${DIR%/*}
-cd $DIR
-set -ex
+. $DIR/env.sh
+set -x
 
-[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
+if ! command -v vertxt &>/dev/null; then
+  bun i -g @3-/vertxt
+fi
+
+bun x -b vertxt ver.yml i18 0.1.0 10
+
+# # windows 下面 bun x 会报错
+# updist=$DIR/node_modules/@3-/updist/mod.js
+#
+# # $updist -h
+#
+# . ./release.sh
+#
+# {
+#   read -r NAME
+#   read -r VER
+# } <<<"$META"
+#
+# find "/tmp/bin/$NAME/$VER" -mindepth 1 -maxdepth 1 -type d -print0 | while IFS= read -r -d '' dir; do
+#   $updist $NAME $VER $CONF/upgrade/sk $dir
+# done
