@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 DIR=$(realpath $0) && DIR=${DIR%/*}
 . $DIR/env.sh
 set -x
