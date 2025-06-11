@@ -58,7 +58,7 @@ jobs:
         run: |
           sh/dist/dist.sh
 
-  ver:
+  vertxt:
     runs-on: ubuntu-latest
     needs: build
     steps:
