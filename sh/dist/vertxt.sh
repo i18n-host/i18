@@ -2,9 +2,10 @@
 
 set -e
 DIR=$(realpath $0) && DIR=${DIR%/*}
-. $DIR/env.sh
-set -x
+cd $DIR
 ./conf.sh
+. env.sh
+set -x
 if ! command -v vertxt &>/dev/null; then
   bun i -g @3-/vertxt
 fi

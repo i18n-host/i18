@@ -2,9 +2,10 @@
 
 set -e
 DIR=$(realpath $0) && DIR=${DIR%/*}
-. $DIR/env.sh
-set -x
+cd $DIR
 ./conf.sh
+. env.sh
+set -x
 bun i
 
 # windows 下面 bun x 会报错
