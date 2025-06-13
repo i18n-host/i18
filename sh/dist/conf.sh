@@ -7,7 +7,7 @@ set -ex
 cd ../..
 if [ ! -d "conf" ]; then
   set +x
-  . dist.conf
+  . .dist.env
   cd ..
   git clone --depth=1 -b dev $CONF_REPO conf
   set -x
