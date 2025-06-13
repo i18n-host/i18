@@ -41,10 +41,7 @@ jobs:
       #     repo-token: ${{ github.token }}
       - name: init
         shell: bash
-        env:
-          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          ./sh/confUnpack.sh
           echo "RUST_VER=$(uname | grep -q 'Darwin' && date -v-28d +"%Y-%m-26" || date -d "28 days ago" +"%Y-%m-26")" >> $GITHUB_ENV
 
       - name: rust-toolchain
@@ -55,6 +52,8 @@ jobs:
 
       - name: dist
         shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           sh/dist/dist.sh
 
@@ -72,7 +71,6 @@ jobs:
       - name: vertxt
         shell: bash
         env:
-          PASSWORD: ${{ secrets.PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ./sh/confUnpack.sh
           ./sh/dist/vertxt.sh

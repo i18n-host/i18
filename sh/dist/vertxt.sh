@@ -4,7 +4,7 @@ set -e
 DIR=$(realpath $0) && DIR=${DIR%/*}
 . $DIR/env.sh
 set -x
-
+./conf.sh
 if ! command -v vertxt &>/dev/null; then
   bun i -g @3-/vertxt
 fi

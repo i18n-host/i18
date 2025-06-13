@@ -4,6 +4,7 @@ set -e
 DIR=$(realpath $0) && DIR=${DIR%/*}
 . $DIR/env.sh
 set -x
+./conf.sh
 bun i
 
 # windows 下面 bun x 会报错
