@@ -53,7 +53,7 @@ jobs:
       - name: dist
         shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           sh/dist/dist.sh
 
@@ -71,6 +71,6 @@ jobs:
       - name: vertxt
         shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           ./sh/dist/vertxt.sh
