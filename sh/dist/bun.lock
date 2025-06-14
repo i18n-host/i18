@@ -3,7 +3,7 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "@3-/updist": "^0.1.11",
+        "@3-/updist": "^0.1.12",
       },
     },
   },
@@ -14,13 +14,13 @@
 
     "@3-/gh_release": ["@3-/gh_release@0.1.4", "", { "dependencies": { "@octokit/rest": "^22.0.0" } }, "sha512-Mqtr0KaMc/h+r1i4tUEL7oH454YFLQAJh0rmukMNXSM5C4aRMV94IJvQ3clg6AsPS+b/2xd0ayAmWI8Aa8FPcA=="],
 
-    "@3-/ossput": ["@3-/ossput@0.1.12", "", { "dependencies": { "@aws-sdk/client-s3": "^3.828.0", "@aws-sdk/lib-storage": "^3.828.0", "@smithy/node-http-handler": "^4.0.6", "https-proxy-agent": "^7.0.6" } }, "sha512-ssaaHir76RFSUqnzvmWoeD4o/45u+3g605eVKjbSKLk8BUiWeyAhJHDtghBTBJfEB4o4wYRqU0xfSlsMujgLrQ=="],
+    "@3-/ossput": ["@3-/ossput@0.1.13", "", { "dependencies": { "@aws-sdk/client-s3": "^3.828.0", "@aws-sdk/lib-storage": "^3.828.0", "@smithy/node-http-handler": "^4.0.6", "https-proxy-agent": "^7.0.6" } }, "sha512-8mZJjODdbwnJaOiyAmW24hJ1U0/JpN6s+/KR8tiA7Kf48oHJQ5PdwMEMlk6oa6SWPOH9uM9nl5WKhwtTJh8DOw=="],
 
     "@3-/retry": ["@3-/retry@0.0.2", "", { "dependencies": { "@3-/caller_line": "^0.0.1", "@3-/sleep": "^0.0.3" } }, "sha512-HK3CxwBGwiD+1iduCiaXtZfS66A5B06ECi9ZHatkVrWwZGjv7tL80cXucw6wkh0QIUM5eZ3RG76Bo0k6HWXlww=="],
 
     "@3-/sleep": ["@3-/sleep@0.0.4", "", {}, "sha512-hxWtyS7EX7efFJyJeMfEZ/csPIklA4EtYFSRKOy29E7RyPOHxRhopYlgmiPs8K4X7XrODj2P3NTJsuhGKlDYPQ=="],
 
-    "@3-/updist": ["@3-/updist@0.1.11", "", { "dependencies": { "@3-/ed25519_ph": "^0.1.4", "@3-/gh_release": "^0.1.4", "@3-/ossput": "^0.1.12", "@3-/retry": "^0.0.2", "@3-/sleep": "^0.0.4", "@3-/utf8": "^0.0.4", "@3-/vb": "^0.1.6", "@8v/curl": "^0.1.7", "simple-zstd": "^1.4.2", "tar": "^7.4.3", "yargs": "^18.0.0" }, "bin": { "updist": "mod.js" } }, "sha512-lAIY7tabWwBe5V4MHj/U19V1yz933D8v6Ax/L+qHslCninHwIU37b0umUDd1GlCMx5PIVYNtRgXP78SgAqtr+Q=="],
+    "@3-/updist": ["@3-/updist@0.1.12", "", { "dependencies": { "@3-/ed25519_ph": "^0.1.4", "@3-/gh_release": "^0.1.4", "@3-/ossput": "^0.1.13", "@3-/retry": "^0.0.2", "@3-/sleep": "^0.0.4", "@3-/utf8": "^0.0.4", "@3-/vb": "^0.1.6", "@8v/curl": "^0.1.7", "simple-zstd": "^1.4.2", "tar": "^7.4.3", "yargs": "^18.0.0" }, "bin": { "updist": "mod.js" } }, "sha512-XsNx199RG5Vl+iAof8nX2il6gbuXR6obzROr+1CVLSF83UeuIyoRrUY0ZwiJIcKbF2by0Hln0YQcTCBP38RicQ=="],
 
     "@3-/utf8": ["@3-/utf8@0.0.4", "", {}, "sha512-hoVIOCX70JteiRPzRZ8Yw51kb/H9dWxx55oW+RQ38hHE8+/uOIriJZ024HhCYaLDKykUyDoknRbzKjjMQ++new=="],
 
