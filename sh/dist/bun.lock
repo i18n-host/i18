@@ -3,7 +3,7 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "@3-/updist": "^0.1.12",
+        "@3-/updist": "^0.1.13",
       },
     },
   },
@@ -20,7 +20,7 @@
 
     "@3-/sleep": ["@3-/sleep@0.0.4", "", {}, "sha512-hxWtyS7EX7efFJyJeMfEZ/csPIklA4EtYFSRKOy29E7RyPOHxRhopYlgmiPs8K4X7XrODj2P3NTJsuhGKlDYPQ=="],
 
-    "@3-/updist": ["@3-/updist@0.1.12", "", { "dependencies": { "@3-/ed25519_ph": "^0.1.4", "@3-/gh_release": "^0.1.4", "@3-/ossput": "^0.1.13", "@3-/retry": "^0.0.2", "@3-/sleep": "^0.0.4", "@3-/utf8": "^0.0.4", "@3-/vb": "^0.1.6", "@8v/curl": "^0.1.7", "simple-zstd": "^1.4.2", "tar": "^7.4.3", "yargs": "^18.0.0" }, "bin": { "updist": "mod.js" } }, "sha512-XsNx199RG5Vl+iAof8nX2il6gbuXR6obzROr+1CVLSF83UeuIyoRrUY0ZwiJIcKbF2by0Hln0YQcTCBP38RicQ=="],
+    "@3-/updist": ["@3-/updist@0.1.13", "", { "dependencies": { "@3-/ed25519_ph": "^0.1.4", "@3-/gh_release": "^0.1.4", "@3-/ossput": "^0.1.13", "@3-/retry": "^0.0.2", "@3-/sleep": "^0.0.4", "@3-/utf8": "^0.0.4", "@3-/vb": "^0.1.6", "@8v/curl": "^0.1.7", "simple-zstd": "^1.4.2", "tar": "^7.4.3", "yargs": "^18.0.0" }, "bin": { "updist": "mod.js" } }, "sha512-706L8Uj6sEHBDEEuQWwKzCc/e+HNQSmdbo4+SdiU/gSyjwOPoxwbwQ6HsHhkRbthd95wj0SlV+Y8A91B7fUh5A=="],
 
     "@3-/utf8": ["@3-/utf8@0.0.4", "", {}, "sha512-hoVIOCX70JteiRPzRZ8Yw51kb/H9dWxx55oW+RQ38hHE8+/uOIriJZ024HhCYaLDKykUyDoknRbzKjjMQ++new=="],
 
