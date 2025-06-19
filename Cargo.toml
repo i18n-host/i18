@@ -32,20 +32,20 @@ ft = "0.1.24"
 futures-util = "0.3.31"
 genv = "0.1.16"
 globset = "0.4.16"
-ifs = { version = "0.1.45", features = ["fs"] }
+ifs = { version = "0.1.46", features = ["fs"] }
 index_of = "0.1.1"
 intbin = "0.2.3"
-ireq = "0.1.22"
+ireq = "0.1.31"
 lang = "0.2.9"
 loginit = "0.1.18"
 pb-jelly = "0.0.17"
 pbar = "0.1.8"
-reqwest = { version = "0.12.19", default-features = false, features = [
+reqwest = { version = "0.12.20", default-features = false, features = [
   "rustls-tls",
   "rustls-tls-native-roots",
 ] }
 reqwest-websocket = "0.5.0"
-saphyr = "0.0.5"
+saphyr = "0.0.6"
 static_init = "1.0.4"
 thiserror = "2.0.12"
 txtfmt = "0.1.2"
