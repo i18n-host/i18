@@ -28,7 +28,6 @@ default = []
 aok = "0.1.17"
 bytes = "1.10.1"
 change = "0.2.9"
-clap = "4.5.40"
 ft = "0.1.24"
 futures-util = "0.3.31"
 genv = "0.1.16"

@@ -1,4 +1,4 @@
-pub const PK: [u8;32] = &[
+pub const PK: [u8;32] = [
     0x62,
     0xb6,
     0x19,
