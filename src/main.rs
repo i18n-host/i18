@@ -2,7 +2,7 @@
 
 use uper::{ArgMatches, Command, arg};
 use aok::{OK, Void};
-use i18::{Error, tran};
+use i18::{Error, tran, upgrade::PK};
 
 #[static_init::constructor(0)]
 extern "C" fn _loginit() {
@@ -30,11 +30,5 @@ async fn run(matches: ArgMatches) -> Void {
 
 #[tokio::main]
 async fn main() -> Void {
-  uper::load!(
-    upgrade_host::UPGRADE_HOST,
-    crate::upgrade::PK,
-    cmd_build,
-    run
-  )
-  .await
+  uper::load!(upgrade_host::UPGRADE_HOST, PK, cmd_build, run)
 }
