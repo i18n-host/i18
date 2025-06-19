@@ -13,7 +13,7 @@ pub enum Error {
   MissDefaultFrom,
 }
 
-pub(crate) mod upgrade;
+pub mod upgrade;
 
 mod term;
 pub use term::term;

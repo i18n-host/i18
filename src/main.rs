@@ -1,8 +1,7 @@
 #![feature(let_chains)]
 
-use uper::{ArgMatches, Command};
+use uper::{ArgMatches, Command, arg};
 use aok::{OK, Void};
-use clap::arg;
 use i18::{Error, tran};
 
 #[static_init::constructor(0)]
