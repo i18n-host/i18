@@ -3010,9 +3010,9 @@ checksum = "8ecb6da28b8a351d773b68d5825ac39017e680750f980f3a1a85cd8dd28a47c1"
 
 [[package]]
 name = "uper"
-version = "0.1.4"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3024d9ebf1eb5cd6f6be68e024dfad695f88c449f110dc6e065e6a8e61644243"
+checksum = "1a3a906d4b55a55a7eeb14bac9bbe66efa39f6e96d6b6b7e593499c4b915cf33"
 dependencies = [
  "aok",
  "clap",
