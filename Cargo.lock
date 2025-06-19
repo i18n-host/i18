@@ -381,16 +381,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b94f61472cee1439c0b966b47e3aca9ae07e45d070759512cd390ea2bebc6675"
 
 [[package]]
-name = "cmdv"
-version = "0.1.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "afa9fd75d08a160ece08a6455f5a25bbc33c0d669aa43421441ad3e6e7874c09"
-dependencies = [
- "clap",
- "current_platform",
-]
-
-[[package]]
 name = "coarsetime"
 version = "0.1.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1069,7 +1059,6 @@ dependencies = [
  "bytes",
  "change",
  "clap",
- "cmdv",
  "ft",
  "futures-util",
  "genv",
@@ -1093,6 +1082,7 @@ dependencies = [
  "txtfmt",
  "ub64",
  "uper",
+ "upgrade_host",
  "vb",
  "xbin",
  "xerr",
@@ -3053,6 +3043,15 @@ dependencies = [
  "ver_from_txt",
  "xerr",
  "zstd",
+]
+
+[[package]]
+name = "upgrade_host"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8a908a48a8328db84c88160e70ae94cdcbe126aad8d3c37c8551f81b3c60f9c4"
+dependencies = [
+ "aok",
 ]
 
 [[package]]
