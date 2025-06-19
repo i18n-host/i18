@@ -5,4 +5,9 @@ cd $DIR
 set -ex
 
 rm -rf ./test/.i18n/hash
-exec cargo run -- -w ./test
+
+if [ $# -eq 0 ]; then
+  set -- -w ./test
+fi
+
+exec cargo run -- $@
