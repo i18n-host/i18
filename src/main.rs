@@ -11,7 +11,7 @@ extern "C" fn _loginit() {
 
 #[tokio::main]
 async fn main() -> Void {
-  load!(upgrade_host::UPGRADE_HOST,).await
+  load!(upgrade_host::UPGRADE_HOST, crate::upgrade::PK,).await
   // if let Some((m, _)) = cmdv!(arg!(-w --workdir [path] "workdir"),) {
   //   let workdir = m
   //     .get_one("workdir")

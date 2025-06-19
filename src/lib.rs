@@ -13,6 +13,8 @@ pub enum Error {
   MissDefaultFrom,
 }
 
+mod upgrade;
+
 mod term;
 pub use term::term;
 
