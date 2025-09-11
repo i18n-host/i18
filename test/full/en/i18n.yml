@@ -1,0 +1,48 @@
+bill: Bill
+translate: Translate
+topup: Top-up
+manual: Manual
+creditCard: Credit Card
+asset: Assets
+amountInTotal: Total
+amountInUsd:
+  a: 1
+  b: 2
+  c:
+    d: 4
+    e: Pretty good
+  e: # 没有内容
+x:
+  - 1
+  - 2
+  - Not bad
+  - |
+    This is
+    a complex
+    text
+  - "string"
+  -    3
+
+txt: |
+  # This is the title
+
+  This is the body **test**
+
+  This is untranslated `代码`
+
+  <code>另外一段不翻译的代码</code>
+
+  Still a `测试`
+
+  [1]: https://www.baidu.com
+
+  Falcon Outperforms Llama? Hugging Face Rankings Spark Controversy
+
+  OceanBase :[How to check which node is the primary for a specific table? ](https://ask.oceanbase.com/t/topic/35602467)
+quote: "Test quotes"
+txt1: >
+  t1
+  t2
+  t3
+
+C: This site is built by <a class="a" href="https://i18n.site">i18n.site</a>

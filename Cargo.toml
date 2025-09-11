@@ -1,0 +1,68 @@
+[package]
+name = "i18"
+version = "0.1.54"
+edition = "2024"
+description = "i18n"
+repository = "https://github.com/i18n-host/i18.git"
+homepage = "https://github.com/i18n-host/i18/tree/dev"
+keywords = []
+
+[profile.release]
+lto = true
+opt-level = 3
+incremental = true
+codegen-units = 1
+overflow-checks = false
+debug-assertions = false
+strip = false
+# panic = 'abort'
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+default = []
+
+[dependencies]
+confer = { version = "0.1.11", features = ["env", "fs"] }
+aok = "0.1.17"
+change = "0.2.19"
+confdir = "0.1.4"
+ft = "0.1.24"
+globset = "0.4.16"
+ifs = { version = "0.1.46", features = ["cp", "fs"] }
+index_of = "0.1.1"
+lang = "0.2.25"
+log_init = "0.1.25"
+saphyr = "0.0.6"
+static_init = "1.0.4"
+thiserror = "2.0.16"
+tran_api = "0.1.36"
+tran_term = { version = "0.1.26", features = ["yml"] }
+uper = "0.1.9"
+upgrade_host = "0.1.1"
+vb = "0.1.8"
+xbin = "0.1.6"
+xerr = "0.1.15"
+tokio-stream = "0.1.17"
+log = "0.4.28"
+tonic = { version = "0.14.2", default-features = false, features = ["transport", "zstd"] }
+
+[dependencies.ub64]
+version = "0.1.14"
+features = ["u64"]
+
+[dependencies.tokio]
+version = "1.47.1"
+features = ["rt", "time", "macros", "rt-multi-thread"]
+
+[dev-dependencies]
+aok = "0.1.17"
+log_init = "0.1.25"
+static_init = "1.0.4"
+log = "0.4.28"
+
+[dev-dependencies.tokio]
+version = "1.47.1"
+features = ["macros", "rt", "rt-multi-thread", "time", "sync"]

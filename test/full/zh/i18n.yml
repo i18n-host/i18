@@ -1,0 +1,48 @@
+bill: 账单
+translate: 翻译
+topup: 充值
+manual: 手动
+creditCard: 信用卡
+asset: 资产
+amountInTotal: 合计
+amountInUsd:
+  a: 1
+  b: 2
+  c:
+    d: 4
+    e: 挺好
+  e: # 没有内容
+x:
+  - 1
+  - 2
+  - 不错
+  - |
+    这是
+    一个复杂的
+    文本
+  - "字符串"
+  -    3
+
+txt: |
+  # 这是标题
+
+  这是正文 **测试**
+
+  这是不翻译的`代码`
+
+  <code>另外一段不翻译的代码</code>
+
+  还是一个 <code>测试</code>
+
+  [1]: https://www.baidu.com
+
+  Falcon 得分超 Llama ？Hugging Face 排名引发争议
+
+  OceanBase : [如何查看某张表的主在哪个节点？](https://ask.oceanbase.com/t/topic/35602467)
+quote: "测试引号"
+txt1: >
+  t1
+  t2
+  t3
+
+C: This site is built by <a class="a" href="https://i18n.site">i18n.site</a>
