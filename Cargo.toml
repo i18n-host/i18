@@ -40,7 +40,7 @@ static_init = "1.0.4"
 thiserror = "2.0.17"
 tran_api = "0.1.36"
 tran_term = { version = "0.1.27", features = ["yml"] }
-uper = "0.1.9"
+uper = "0.1.10"
 upgrade_host = "0.1.1"
 vb = "0.1.8"
 xbin = "0.1.7"

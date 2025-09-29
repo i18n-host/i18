@@ -3347,9 +3347,9 @@ checksum = "8ecb6da28b8a351d773b68d5825ac39017e680750f980f3a1a85cd8dd28a47c1"
 
 [[package]]
 name = "uper"
-version = "0.1.9"
+version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de52ee3b867b2c6d141a2321fb3aeddc3e79330a4fbc0ea14c1ca5e6e7f116d1"
+checksum = "e19b2dc17290187301bdf1df7b4b6b286928672eeca091407d8b500a00c1c84a"
 dependencies = [
  "aok",
  "clap",
@@ -3357,7 +3357,7 @@ dependencies = [
  "coarsetime",
  "confdir",
  "confer",
- "const-str 0.6.4",
+ "const-str 0.7.0",
  "current_platform",
  "defer-lite",
  "down",
